@@ -1,9 +1,13 @@
-<h1>Showing Article Details</h1>
 
-
-<p> <strong>Title: </strong><%= @article.title %></p>
-<p> <strong>Description: </strong><%= simple_format(@article.description) %></p>
-
-<%= link_to 'Edit', edit_article_path(@article)%> | 
-<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }%> | 
-<%= link_to 'Return to articles listing', articles_path%>
+<div class="container text-center">
+<h1>Article Details</h1>
+  <div class="card mt-4 mx-5 py-4">
+  <div class="card-body">
+    <h5 class="card-title"><strong>Title: </strong><%= @article.title %></h5>
+    <p class="card-text"><%= @article.description %></p>
+    <%= link_to 'Edit', edit_article_path(@article),class: "btn btn-primary" %>
+    <%= link_to 'Delete', article_path(@article), class:"btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" }%>
+    <%= link_to 'Return to articles listing', articles_path, class: "btn btn-warning"%>
+  </div>
+  </div>
+</div>
