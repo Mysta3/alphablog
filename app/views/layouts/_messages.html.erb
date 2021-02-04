@@ -1,4 +1,8 @@
 <%# Place here to let all views have access to these flash messages. %>
+<div class="container">
   <% flash.each do |name, msg| %>
-    <%= msg %>
-  <% end %>
+    <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alert-dismissible fade show" role="alert">
+      <%= msg %>
+    </div>
+  <% end %> 
+</div>
