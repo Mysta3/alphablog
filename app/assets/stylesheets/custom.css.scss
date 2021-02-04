@@ -1,17 +1,14 @@
+
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
   background-color: black !important;
-  }
-
-.navbar-brand {
-  font-size: 3rem;
 }
 
-.nav-link{
+.nav-link {
   color: white !important;
 }
-  
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -21,7 +18,7 @@
   font-weight: bold;
 }
 
-#home-container{
+#home-container {
   margin-top: 25px;
 }
 
@@ -30,8 +27,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 350px;
-  width: auto;
+  height: 425px;
 }
 
 html,
@@ -43,8 +39,6 @@ body {
   flex: 1 0 auto;
   background-color: lightgrey;
 }
-
-
 
 #sticky-footer {
   flex-shrink: none;
