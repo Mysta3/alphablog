@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   # show all
   def index
       # instance variable to make it available in views
-      @articles = Article.all
+      @articles = Article.paginate(page: params[:page], per_page: 1)
   end
 
 
@@ -34,7 +34,6 @@ class ArticlesController < ApplicationController
   end
 
   def update
-     
      if @article.update(article_params)
       flash[:notice] = "Article was updated successfully."
       redirect_to @article

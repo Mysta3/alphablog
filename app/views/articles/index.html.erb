@@ -1,7 +1,15 @@
-
 <h1 class="text-center mt-4">Articles listing Page</h1>
+<div class="apple_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
+
+
 <%= render 'article'%>
 
+
+<div class="apple_pagination mb-4">
+  <%= will_paginate @articles, :container => false %>
+</div>
   <%# link_to won't work due to line 10 within application.html.erb file being commented out. so I used button_to until I can find a fix. %>
    
 
