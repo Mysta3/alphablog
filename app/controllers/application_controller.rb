@@ -1,2 +1,13 @@
 class ApplicationController < ActionController::Base
+  # adding methods here allows for every page of the application to have access to these methods
+
+  helper_method :current_user, :logged_in?
+
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
+  def logged_in?
+    !!current_user
+  end
 end

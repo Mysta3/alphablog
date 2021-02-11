@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   #show one
   def show
       # byebug # -> pauses web server, can be used to see params for the route
-      # -> dynamically retrieve the article
+     
   end
 
   # show all
@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
   end
   def create
       @article = Article.new(article_params)
-      @article.user = User.first
+      @article.user = current_user
       if @article.save
           flash[:notice] = "Article was created successfully."
           redirect_to @article
