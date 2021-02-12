@@ -9,8 +9,10 @@
     </div>
     <h5 class="card-title"><strong>Title: </strong><%= @article.title %></h5>
     <p class="card-text"><%= @article.description %></p>
-    <%= link_to 'Edit', edit_article_path(@article),class: "btn btn-primary" %>
-    <%= link_to 'Delete', article_path(@article), class:"btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" }%>
+     <% if logged_in? && @article.user == current_user %>
+      <%= link_to 'Edit', edit_article_path(@article),class: "btn btn-primary" %>
+      <%= link_to 'Delete', article_path(@article), class:"btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" }%>
+     <% end %>
     <%= link_to 'Return to articles listing', articles_path, class: "btn btn-warning"%>
   </div>
   </div>
