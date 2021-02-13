@@ -15,13 +15,14 @@
         <li class="nav-item">
           <%= link_to'Create new Article', new_article_path, class:"btn btn-success text-white nav-link mx-2"%>
         </li>
-        <% if logged_in? %>
+        <% if logged_in? && current_user %>
         <li class="nav-item">
           <%= link_to current_user.username, user_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= button_to 'Logout', logout_path , class: "nav-link", method: :delete %>
         </li>
+        <%= button_to "Delete profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?" } %>
       <% else %>
         <li class="nav-item">
           <%= link_to 'Log in', login_path, class: "nav-link" %>
