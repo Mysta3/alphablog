@@ -9,7 +9,7 @@
     </div>
     <h5 class="card-title"><strong>Title: </strong><%= @article.title %></h5>
     <p class="card-text"><%= @article.description %></p>
-     <% if logged_in? && @article.user == current_user %>
+     <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
       <%= link_to 'Edit', edit_article_path(@article),class: "btn btn-primary" %>
       <%= link_to 'Delete', article_path(@article), class:"btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" }%>
      <% end %>
