@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   # show all
   def index
       # instance variable to make it available in views
-      @articles = Article.paginate(page: params[:page], per_page: 1)
+      @articles = Article.paginate(page: params[:page], per_page: 3)
   end
 
 

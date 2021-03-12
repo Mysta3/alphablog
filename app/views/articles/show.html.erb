@@ -3,9 +3,15 @@
 <h1>Article Details</h1>
   <div class="card mt-4 mx-5 py-4">
   <div class="card-body">
-    <div class="card header font-italic"> 
+    <div class="card header mx-3 font-italic"> 
       <%= @article.user.username if @article.user %>
       <%= link_to gravatar_for(@article.user), user_path(@article.user)%>
+      <% if @article.categories.any? %>
+        <%# loops through categories array and renders a partial for each %>
+        <div class="my-3">
+          <%= render @article.categories %> 
+        </div> 
+      <% end %>
     </div>
     <h5 class="card-title"><strong>Title: </strong><%= @article.title %></h5>
     <p class="card-text"><%= @article.description %></p>
