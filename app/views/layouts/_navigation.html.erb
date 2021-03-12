@@ -31,7 +31,7 @@
           <%= "(Admin)" if current_user.admin? %><%= link_to current_user.username, user_path(current_user), class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= button_to 'Logout', logout_path , class: "nav-link", method: :delete %>
+          <%= button_to 'Logout', logout_path , class: "nav-link btn btn-outline-warning", method: :delete %>
         </li>
         <%= button_to "Delete profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?" } %>
       <% else %>
