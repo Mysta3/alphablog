@@ -21,12 +21,6 @@
           <div class="col-10">
              <%= f.collection_select :category_ids, Category.order(:name), :id, :name,
              {prompt: "Select a Category Below (can be empty) CMD+C to select multiple"}, {multiple: true, size: 3, class: 'form-select form-select-md mb-3 shadow rounded'} %> 
-            <%
-=begin%>
- <%= f.text_area :category, rows: 10, class: "form-control shadow rounded", placeholder: "Description of article" %> 
-<%
-=end%>   
-
           </div>
         </div>
 
