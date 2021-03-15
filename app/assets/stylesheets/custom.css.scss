@@ -22,12 +22,23 @@
   margin-top: 25px;
 }
 
-.jumbotron{
-  background-image: asset-url('ab_image.jpg');
+.hero-description{
+  background-color: #aaaaaa7a;
+  padding: 1% 4%; 
+  margin: 1% 6%;
+}
+
+#jumbotron_image{
+  background-image: asset-url('blog-picture.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 425px;
+}
+
+#about-description{
+margin: 5%;
+padding: 5%;
 }
 
 html,
