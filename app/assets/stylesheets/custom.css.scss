@@ -1,6 +1,10 @@
 
 @import 'bootstrap/dist/css/bootstrap';
 
+*{
+  box-sizing: border-box;
+}
+
 .navbar {
   background-color: black !important;
 }
@@ -29,7 +33,7 @@
 }
 
 #jumbotron_image{
-  background-image: asset-url('blog-picture.jpg');
+  background-image: asset-url('travel-blog.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,8 +60,6 @@ body {
 }
 
 .apple_pagination {
-  // background: #5c5c5c;
-  // border: 1px solid #5c5c5c;
   text-align: center;
   padding: 1em;
   cursor: default; }

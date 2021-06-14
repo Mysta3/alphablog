@@ -5,13 +5,17 @@
     <div class="card text-center shadow mb-5 bg-white rounded">
       <div class="card-header font-italic">
         <% if article.user %>
-          By <%= link_to article.user.username, user_path(article.user) %>
+          By <em><%= link_to article.user.username.capitalize(), user_path(article.user) %></em>
+        <%else%>
+          <em>Author Anonymous</em>  
         <% end %>
         <% if article.categories.any? %>
         <%# loops through categories array and renders a partial for each %>
-          <div class="my-3">
+          <div class="my-2">
             <%= render article.categories %> 
           </div> 
+        <%else%>
+          <div>No category assigned</div>
       <% end %>
       </div>
       <div class="card-body">
