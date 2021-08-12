@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  background-color: black !important;
+  background-color: #202020 !important;
 }
 
 
@@ -28,7 +28,7 @@
 }
 
 .hero-description{
-  background-color: #aaaaaa7a;
+  background-color: #ffffffc9;
   padding: 1% 4%; 
   margin: 1% 6%;
 }
@@ -38,6 +38,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0px 3px 45px #000000e3;
   height: 425px;
 }
 
@@ -53,7 +54,7 @@ body {
 
 #page-content {
   flex: 1 0 auto;
-  background-color: lightgrey;
+  background-color: rgb(255, 255, 255);
 }
 
 #sticky-footer {
